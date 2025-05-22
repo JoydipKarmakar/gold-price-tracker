@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Metal Prices & History (INR)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <!-- Include Chart.js adapter for date-fns for time series -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1><span class="gold-text">Gold & Silver</span> Price Tracker</h1>
+        </header>
+
+        <section class="current-prices-section">
+            <h2>Current Prices (INR)</h2>
+            <div id="price-container" class="price-list">
+                <p>Loading current prices...</p>
+                <!-- Current prices will be loaded here by JavaScript -->
+            </div>
+            <p id="last-updated" class="last-updated">Last updated: --</p>
+            <div id="error-message" class="error"></div>
+        </section>
+
+        <hr class="separator">
+
+        <section class="historical-data-section">
+            <h2>Historical Gold Price (USD)</h2>
+            <div class="chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+            <p class="note">Note: Graph shows historical USD/Gold data from a static CSV file.</p>
+        </section>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
